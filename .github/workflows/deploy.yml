@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     
     steps:
       # Step 1: Checkout the code
@@ -24,7 +24,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             # Navigate to the deployment directory
-            cd /home/ubuntu/test_project/testrepo
+            cd /home/ubuntu/django-aws-ec2-nginx-gunicorn
             # Pull the latest changes
             git pull
             # Any additional deployment steps or commands can be added here
