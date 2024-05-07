@@ -1,0 +1,30 @@
+name: Deploy to EC2
+
+# Trigger on push to the main branch
+on:
+  push:
+    branches:
+      - test-branch
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    
+    steps:
+      # Step 1: Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Deploy to EC2 via SSH
+      - name: SSH and deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.EC2_PUBLIC_IP }}
+          username: ubuntu
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # Navigate to the deployment directory
+            cd /home/ubuntu/test_project/testrepo
+            # Pull the latest changes
+            git pull
+            # Any additional deployment steps or commands can be added here
