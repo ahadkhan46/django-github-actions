@@ -2,18 +2,18 @@
 set -e
 
 # Replace {YOUR_GIT_REOPO_URL} with your actual Git repository URL
-GIT_REPO_URL="git@github.com:ahadkhan46/django-github-actions.git"
+#GIT_REPO_URL="git@github.com:ahadkhan46/django-github-actions.git"
 
 # If using Private Repo
 #GIT_REPO_URL="https://<your_username>:<your_PAT>@github.com/codewithmuh/django-aws-ec2-autoscaling.git"
 
 # Replace {YOUR_PROJECT_MAIN_DIR_NAME} with your actual project directory name
-PROJECT_MAIN_DIR_NAME="django-github-actions"
+#PROJECT_MAIN_DIR_NAME="django-github-actions"
 
 # Clone repository
-git clone "$GIT_REPO_URL" "/home/ubuntu/"
+git clone git@github.com:ahadkhan46/django-github-actions.git
 
-cd "/home/ubuntu/$PROJECT_MAIN_DIR_NAME"
+cd "/home/ubuntu/django-github-actions
 
 # Make all .sh files executable
 chmod +x scripts/*.sh
