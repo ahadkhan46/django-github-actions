@@ -27,6 +27,6 @@ jobs:
           aws ssm send-command \
             --instance-ids "i-0ce24949367e96ab1" \
             --document-name "AWS-RunShellScript" \
-            --parameters 'commands=["cd /home/ubuntu/django-github-actions", "git pull"]' \
+            --parameters 'commands=["cd /home/ubuntu/django-github-actions", "git pull", "sudo systemctl restart gunicorn.service"]' \
             --output text
 
