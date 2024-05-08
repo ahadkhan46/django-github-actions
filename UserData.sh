@@ -9,7 +9,6 @@ set -e
 
 # Replace {YOUR_PROJECT_MAIN_DIR_NAME} with your actual project directory name
 #PROJECT_MAIN_DIR_NAME="django-github-actions"
-
 # Clone repository
 git clone git@github.com:ahadkhan46/django-github-actions.git
 
