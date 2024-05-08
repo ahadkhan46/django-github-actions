@@ -27,7 +27,6 @@ jobs:
           aws ssm send-command \
             --instance-ids "i-0ce24949367e96ab1" \
             --document-name "AWS-RunShellScript" \
-            --parameters 'commands=["rm -rf  /home/ubuntu/django-github-actions", "cd /home/ubuntu", "chmod +x UserData.sh", "git clone git@github.com:ahadkhan46/django-github-actions.git
-"]' \
+            --parameters 'commands=["rm -rf  /home/ubuntu/django-github-actions", "cd /home/ubuntu", "chmod +x UserData.sh", "git clone git@github.com:ahadkhan46/django-github-actions.git"]' \
             --output text
 
