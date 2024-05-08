@@ -14,7 +14,6 @@ set -e
 git clone git@github.com:ahadkhan46/django-github-actions.git
 
 cd /home/ubuntu/django-github-actions
-
 # Make all .sh files executable
 chmod +x scripts/*.sh
 
