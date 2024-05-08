@@ -27,6 +27,6 @@ jobs:
           aws ssm send-command \
             --instance-ids "i-0ce24949367e96ab1" \
             --document-name "AWS-RunShellScript" \
-            --parameters 'commands=["sudo su -", "cd /home/ubuntu/data && ./UserData.sh"]' \
+            --parameters 'commands=["sudo su - && cd /home/ubuntu/data && ./UserData.sh"]' \
             --output text
 
